@@ -71,7 +71,7 @@ namespace BasicAlgorithms
                 lstNumbers.RemoveAt(nEnd);
                 lstNumbers = Heapify(lstNumbers);
             }
-            return !descending ? lstSorted : lstSorted.Reverse<int>().ToList();
+            return descending ? lstSorted : lstSorted.Reverse<int>().ToList();
         }
 
     }
