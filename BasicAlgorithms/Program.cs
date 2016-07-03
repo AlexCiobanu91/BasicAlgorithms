@@ -9,7 +9,8 @@ namespace BasicAlgorithms
     class Program
     {
         static List<int> lstNumbers = new List<int> { 1, 10, 19, 25, 34, 23, 65, 74, 324, 354, 12, 54, 76, 435 };
-        static void Main(string[] args)
+
+        static void SortMethods()
         {
             // HeapSort
             List<int> lstSorted = HeapSort.Sort(new List<int>(lstNumbers), descending: false);
@@ -30,6 +31,20 @@ namespace BasicAlgorithms
             }
             Console.WriteLine();
 
+
+            
+        }
+
+        static void DynamicProgramming()
+        {
+            List<List<int>> mliss = MaxLengthIncreasingSubSequence.Mliss(lstNumbers);
+            MaxLengthIncreasingSubSequence.PrintSequences(mliss);
+        }
+
+        static void Main(string[] args)
+        {
+           // SortMethods();
+            DynamicProgramming();
 
             Console.ReadKey();
         }
