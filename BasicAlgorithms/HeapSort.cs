@@ -54,7 +54,7 @@ namespace BasicAlgorithms
             return lstNumbers;
         }
 
-        public static List<int> Sort(List<int> lstNumbers, bool Descending = false)
+        public static List<int> Sort(List<int> lstNumbers, bool descending = false)
         {
             List<int> lstSorted = new List<int>();
             lstNumbers = Heapify(lstNumbers);
@@ -71,7 +71,7 @@ namespace BasicAlgorithms
                 lstNumbers.RemoveAt(nEnd);
                 lstNumbers = Heapify(lstNumbers);
             }
-            return !Descending ? lstSorted : lstSorted.Reverse<int>().ToList();
+            return !descending ? lstSorted : lstSorted.Reverse<int>().ToList();
         }
 
     }

@@ -11,7 +11,7 @@ namespace BasicAlgorithms
         static List<int> lstNumbers = new List<int> { 1, 10, 19, 25, 34, 23, 65, 74, 324, 354, 12, 54, 76, 435 };
         static void Main(string[] args)
         {
-            List<int> lstSorted = HeapSort.Sort(lstNumbers, true);
+            List<int> lstSorted = HeapSort.Sort(lstNumbers, descending: false);
             foreach (int i in lstSorted.Reverse<int>())
             {
                 Console.Write(i + " ");
